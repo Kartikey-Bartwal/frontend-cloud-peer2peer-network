@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Cloud Peer-to-Peer</title>
-  <link rel="stylesheet" href="send.css">
+  <link rel="stylesheet" href="send.css"> <!-- External CSS file -->
 </head>
 <body>
   <div class="header">
     <h1 class="user-heading">User</h1>
   </div>
-  <form id="uploadForm" action="/post-image" method="POST">
+  <form id="uploadForm" action="http://127.0.0.1:8080/submit" method="POST"> <!-- Form for uploading an image -->
     <div class="container">
       <div class="upload-section">
+        <!-- Input for selecting an image file -->
         <label for="imageInput" class="custom-file-upload">
           <input type="file" id="imageInput">
           <span>Choose the image</span>
         </label>
+        <!-- Checkbox for encrypting the image -->
         <label for="encryptCheckbox">Encrypt Image:</label>
         <input type="checkbox" id="encryptCheckbox">
         <br>
+        <!-- Input for setting the number of allowed views -->
         <label for="viewsCount">Set Views Allowed:</label>
         <input type="number" id="viewsCount" name="viewsCount" min="1">
         
+        <!-- Button to submit the form -->
         <button type="submit" id="postImageButton">Post Image</button>
         
         <div id="uploadAnimation" style="display: none;">
-          <!-- Display uploaded images and their view counts -->
+          <!-- Placeholder for displaying uploaded images and their view counts -->
+          <!-- This section will be populated dynamically after form submission -->
           <div id="imageList" class="image-grid">
             <!-- Images and their view counts will be displayed here -->
           </div>
@@ -36,7 +41,7 @@
 
   <script>
     document.getElementById('uploadForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+      event.preventDefault(); // Prevents the default form submission behavior
       console.log('Your image has been posted');
       // You can add code here to send the form data to the server using AJAX or Fetch
     });
