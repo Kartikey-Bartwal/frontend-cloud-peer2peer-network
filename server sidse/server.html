@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Side</title>
+  <link rel="stylesheet" href="server.css">
+</head>
+<body>
+    <div class="header">
+      <h1 class="user-heading">Server</h1>
+    </div>
+    <div class="container">
+      <h2>Server Information</h2>
+      <div class="server-info">
+        <h3>Number of Servers: <span id="serverCount">0</span></h3>
+        <div class="server-list">
+          <!-- Server names will be dynamically added here -->
+        </div>
+        <h3>Users Sending Image <input class="output-text" type="text" readonly></h3>
+        <div class="sending-users">
+          <!-- List of users sending an image will be dynamically added here -->
+        </div>
+        <h3>Users Receiving Image <input class="output-text" type="text" readonly></h3>
+        <div class="receiving-users">
+          <!-- List of users receiving an image will be dynamically added here -->
+        </div>
+        <h3>Most Vacant Server</h3>
+        <div class="vacant-server">
+          <p id="mostVacantServer">None</p>
+        </div>
+      </div>
+    </div>
+  
+    <script src="server_script.js"></script>
+  </body>
+</html>

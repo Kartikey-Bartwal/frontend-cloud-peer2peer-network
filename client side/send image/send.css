@@ -1,0 +1,291 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .container {
+    /* max-width: 800px; */
+    width:40%;
+    /* height:40%; */
+    position: fixed;
+    margin-top:10px;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    border-color: aqua;
+    box-shadow: 0 0 20px rgba(17, 220, 88, 0.908);
+  }
+  
+  .upload-section {
+    margin-bottom: 30px;
+  }
+  
+  /* Style the custom file upload button */
+  .custom-file-upload {
+    display: block;
+    width:19%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #5dc32d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-upload img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #3f851e;
+  }
+  
+  button {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #5dc32d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3f851e;
+  }
+  
+  #uploadAnimation {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #imageList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  #imageList .image-item {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 20fpx;
+    text-align: center;
+  }
+  
+  #imageList img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  label[for="viewsCount"] {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  label[for="encryptCheckbox"] {
+    display: block;
+    margin-bottom: 10px; /* Adjusted margin for consistency */
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Style the checkbox input */
+  input[type="checkbox"] {
+    display: inline-block;
+    width: auto; /* Adjust width as needed */
+    margin-right: 10px; /* Spacing between checkbox and text */
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"] {
+    width: 20px; /* Set the width */
+    height: 20px; /* Set the height */
+    appearance: none; /* Hide default checkbox */
+    border: 2px solid white; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove default focus styles */
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style the checked state */
+  input[type="checkbox"]:checked {
+    background-color: white; /* Change background color when checked */
+  }
+  
+  /* Style the custom checkbox label */
+  label[for="encryptCheckbox"] {
+    display: flex; /* Align checkbox and text */
+    align-items: center; /* Vertically center elements */
+    margin-bottom: 10px; /* Adjusted margin for consistency */
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* Hide the default checkbox visually */
+  input[type="checkbox"]::before {
+    content: ""; /* Empty content */
+    display: inline-block;
+    width: 16px; /* Width of the checkbox */
+    height: 16px; /* Height of the checkbox */
+    border-radius: 3px; /* Rounded corners */
+    margin: bottom 19px;
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style the checked state of the custom checkbox */
+  input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Unicode checkmark symbol */
+    font-size: 14px; /* Checkmark size */
+    color: #ffffff; /* Checkmark color */
+    background-color: white; /* Background color when checked */
+    text-align: center;
+    line-height: 16px; /* Center checkmark vertically */
+  }
+  input[type="number"] {
+    width: 10%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #3498db;
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-size: 20px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  input[type="number"]:focus,
+  input[type="number"]:hover {
+    border-color: #2980b9;
+    background-color: #34495e;
+  }
+  
+  button {
+    margin-bottom: 9px;
+  }
+  
+  #uploadAnimation {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #imageList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  #imageList .image-item {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #imageList img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+
+label[for="viewsCount"] {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #3498db;
+  background-color: #2c3e50;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 5px; /* Adding margin to the input box */
+}
+
+input[type="number"]:focus,
+input[type="number"]:hover {
+  border-color: #2980b9;
+  background-color: #34495e;
+}label[for="viewsCount"] {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+input[type="number"] {
+  width: 5%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #3498db;
+  background-color: #2c3e50;
+  color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 5px; /* Adding margin to the input box */
+}
+
+input[type="number"]:focus,
+input[type="number"]:hover {
+  border-color: #2980b9;
+  background-color: #34495e;
+}
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #212121;
+    color: #ffffff;
+  }
+  
+  .user-heading {
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #3498db;
+    animation: fadeInDown 3s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInDown {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
